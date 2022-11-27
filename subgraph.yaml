@@ -30,3 +30,49 @@ dataSources:
         - event: RemoveOperator(address)
           handler: handleRemoveOperator
       file: ./src/gg-quests.ts
+  - kind: ethereum
+    name: ggProfiles
+    network: mumbai
+    source:
+      address: "0x3f64DFB6009d138DfD7b62916f3322A438d8b00D"
+      abi: ggProfiles
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - ggProfilesAddOperator
+        - AddSupportedThirdParty
+        - Burn
+        - DecreaseReputation
+        - IncreaseReputation
+        - LinkThirdPartyToProfile
+        - Mint
+        - ggProfilesRemoveOperator
+        - UnlinkThirdPartyToProfile
+        - Update
+      abis:
+        - name: ggProfiles
+          file: ./abis/ggProfiles.json
+      eventHandlers:
+        - event: ggProfilesAddOperator(address)
+          handler: handleggProfilesAddOperator
+        - event: AddSupportedThirdParty(string)
+          handler: handleAddSupportedThirdParty
+        - event: Burn(address)
+          handler: handleBurn
+        - event: DecreaseReputation(address,uint256)
+          handler: handleDecreaseReputation
+        - event: IncreaseReputation(address,uint256)
+          handler: handleIncreaseReputation
+        - event: LinkThirdPartyToProfile(address,uint256,uint256)
+          handler: handleLinkThirdPartyToProfile
+        - event: Mint(address,string)
+          handler: handleMint
+        - event: ggProfilesRemoveOperator(address)
+          handler: handleggProfilesRemoveOperator
+        - event: UnlinkThirdPartyToProfile(address,uint256)
+          handler: handleUnlinkThirdPartyToProfile
+        - event: Update(address,string)
+          handler: handleUpdate
+      file: ./src/gg-profiles.ts

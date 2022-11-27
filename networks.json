@@ -2,6 +2,9 @@
   "mumbai": {
     "ggQuests": {
       "address": "0xAe5C53294003f72B27CEF476680979453193673d"
+    },
+    "ggProfiles": {
+      "address": "0x3f64DFB6009d138DfD7b62916f3322A438d8b00D"
     }
   }
 }

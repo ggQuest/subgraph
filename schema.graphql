@@ -31,3 +31,89 @@ type RemoveOperator @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+type ggProfilesAddOperator @entity(immutable: true) {
+  id: Bytes!
+  _operator: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type AddSupportedThirdParty @entity(immutable: true) {
+  id: Bytes!
+  _name: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Burn @entity(immutable: true) {
+  id: Bytes!
+  _userAddress: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DecreaseReputation @entity(immutable: true) {
+  id: Bytes!
+  _userAddress: Bytes! # address
+  _amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type IncreaseReputation @entity(immutable: true) {
+  id: Bytes!
+  _userAddress: Bytes! # address
+  _amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type LinkThirdPartyToProfile @entity(immutable: true) {
+  id: Bytes!
+  _userAddress: Bytes! # address
+  _thirdPartyId: BigInt! # uint256
+  _thirdPartyUserId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Mint @entity(immutable: true) {
+  id: Bytes!
+  _userAddress: Bytes! # address
+  _pseudo: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ggProfilesRemoveOperator @entity(immutable: true) {
+  id: Bytes!
+  _operator: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type UnlinkThirdPartyToProfile @entity(immutable: true) {
+  id: Bytes!
+  _userAddress: Bytes! # address
+  _thirdPartyId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Update @entity(immutable: true) {
+  id: Bytes!
+  _userAddress: Bytes! # address
+  _pseudo: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

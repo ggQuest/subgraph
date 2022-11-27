@@ -1,5 +1,5 @@
 {
-  "name": "ggquest",
+  "name": "ggquest-subgraph",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
